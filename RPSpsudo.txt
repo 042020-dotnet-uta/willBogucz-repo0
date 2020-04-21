@@ -1,0 +1,17 @@
+1.//Prompt the user1 to enter name, user1
+2.//Prompt the user2 to enter name, user2
+3.//Define user1_wins, user2_wins,user1_choice, user2_choice, total_rounds, ties
+4.// define list result
+5.// define list user1_choices
+6.// define list user2_choices
+7.// while( user1_wins and user2_wins <2)
+8.//Assign random choice to  user1_choice
+9.//Assign random choice to  user2_choice
+10.// if user1_choice==user2_choice then increment ties. also add 'tie' to results
+11.// else if user1_choice is scissors and user2_choice is paper then increment user1_wins. Also add user1 to results
+12.// else if user1_choice is rock and user2_choice is scissors then increment user1_wins. Also add user1 to results
+13.// else if user1_choice is paper and user2_choice is rock then increment user1_wins. Also add user1 to results
+14.// else user2_wins incremented. Also add user2 to results
+15.// for loop while i equals 0: i < result length + 1: i++, print "Round "i+1" - "user1" chooses "user1_choice" and "user2" chooses "user2_choice"- "result[i]" wins"
+16.// if user1_wins equals 2 thens print user1 wins 2-user2_wins with ties tie
+17.// else  print user2 wins 2-user1_wins with ties tie
