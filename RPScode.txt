@@ -1,0 +1,114 @@
+using System;
+using System.Collections.Generic;
+
+namespace RPS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Player one enter name: ");
+            var user1 = Console.Readline();
+
+            Console.WriteLine("Player two enter name: "):
+            var user2 = Console.ReadLine();
+
+            //initializes the variables
+            int user1_wins = 0;
+            int user2_wins = 0;
+            string user1_choice;
+            string user2_choice;
+            int total_rounds;
+            int ties = 0;
+            list<string> result = new list<string>();
+            list<string> user1_choices = new list<string>();
+            list<string> user2_choices = new list<string>();
+            string rps = new string["Rock", "Paper", "Scissors"];
+            //creats random number generator
+            Random rnd = new Random();
+
+
+
+            //while loop to run the game
+            while (user1_wins < 2 && user2_wins < 2)
+            {
+                //assigns random choice for both users
+                user1_choice = rps[rnd.Next(0, 3)];
+                user1_choice = rps[rnd.Next(0, 3)];
+
+                //accounts for tie
+                if (user1_choice == user2_choice)
+                {
+                    //increment ties
+                    ties++;
+                    //adds ties to result list
+                    result.Add("tie");
+                    //add user choices
+                    user1_choices.Add(user1_choice);
+                    user2_choices.Add(user2_choice);
+                }
+                else if (user1_choice == "Rock" && user2_choice == "Scissors")
+                {
+                    //increments user1 score
+                    user1_wins++;
+                    //adds rock to user ones choices
+                    results.Add(user1);
+                    //add user choices
+                    user1_choices.Add(user1_choice);
+                    user2_choices.Add(user2_choice);
+                }
+                else if (user1_choice == "Paper" && user2_choice == "Rock")
+                {
+                    //increments user1 score
+                    user1_wins++;
+                    //adds rock to user ones choices
+                    results.Add(user1);
+                    //add user choices
+                    user1_choices.Add(user1_choice);
+                    user2_choices.Add(user2_choice);
+                }
+                else if (user1_choice == "Scissors" && user2_choice == "Paper")
+                {
+                    //increments user1 score
+                    user1_wins++;
+                    //adds rock to user ones choices
+                    results.Add(user1);
+                    //add user choices
+                    user1_choices.Add(user1_choice);
+                    user2_choices.Add(user2_choice);
+                }
+                else
+                {
+                    //increments user2 score
+                    user2_wins++;
+                    results.Add(user2);
+                    //add user choices
+                    user1_choices.Add(user1_choice);
+                    user2_choices.Add(user2_choice);
+
+                }
+            }
+            for (int i = 0; i < result.Count; i++)
+            {
+                if (user1_choices[i] != user2_choice[i])
+                {
+                    Console.WriteLine("Round " + (i + 1) + " - " + user1 + " chooses " + user1_choice + " and " + user2 + " chooses " + user2_choice + "- " + result[i] + " wins.");
+                }
+                else
+                {
+                    Console.WriteLine("The result is a tie");
+                }
+            }
+            if(user1_wins == 2)
+            {
+                Console.WriteLine(user1 + " wins 2- " + user2 + "wins " +user2_wins + " with " + ties +  " ties.");
+            }
+            else
+            {
+                Console.WriteLine(user2 + " wins 2- " + user1 + "wins " +user1_wins + " with " + ties +  " ties.");
+            }
+
+
+        }
+    }
+}
